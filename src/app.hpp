@@ -1,6 +1,6 @@
 #pragma once
 
-namespace gEngine
+namespace gve
 {
     class app
     {

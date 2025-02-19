@@ -5,7 +5,7 @@
 
 int main()
 {
-    gEngine::app app;
+    gve::app app;
 
     try
     {
