@@ -2,5 +2,11 @@
 
 namespace ge
 {
-    void App::run() {}
+    void App::run()
+    {
+        while (!window.shouldClose())
+        {
+            glfwPollEvents();
+        }
+    }
 }

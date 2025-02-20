@@ -21,5 +21,6 @@ namespace ge
     public:
         Window(int w, int h, std::string name);
         ~Window();
+        bool shouldClose();
     };
 }

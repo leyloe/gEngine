@@ -9,6 +9,14 @@ namespace ge
 
     Window::~Window()
     {
+        glfwDestroyWindow(window);
+
+        glfwTerminate();
+    }
+
+    bool Window::shouldClose()
+    {
+        return glfwWindowShouldClose(window);
     }
 
     void Window::initWindow(int w, int h, std::string name)
