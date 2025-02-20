@@ -1,11 +1,19 @@
 #pragma once
 
-namespace gve
+#include "window.hpp"
+
+namespace ge
 {
-    class app
+    class App
     {
     public:
+        static constexpr int WIDTH = 800;
+        static constexpr int HEIGHT = 600;
+
         void run();
+
+    private:
+        Window Window{WIDTH, HEIGHT, "Hello Vulkan!"};
     };
 
 }
