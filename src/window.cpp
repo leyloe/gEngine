@@ -2,7 +2,7 @@
 
 namespace ge
 {
-    Window::Window(int w, int h, std::string name)
+    Window::Window(int w, int h, std::string name) : width{w}, height{h}, windowName{name}
     {
     }
 
