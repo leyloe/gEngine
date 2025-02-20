@@ -8,7 +8,7 @@ EXE=$(BIN_DIR)/$(NAME)
 
 CC=g++
 
-CFLAGS=-std=c++17 -O2 -I$(INCLUDE_DIR)
+CFLAGS=-I$(INCLUDE_DIR) -std=c++17 -O2
 LDFLAGS=-lglfw -lvulkan -ldl -lpthread -lwayland-client -lwayland-egl -lwayland-cursor
 
 $(EXE): $(OBJ)
