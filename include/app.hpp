@@ -13,7 +13,7 @@ namespace ge
         void run();
 
     private:
-        Window Window{WIDTH, HEIGHT, "Hello Vulkan!"};
+        Window window{WIDTH, HEIGHT, "Hello Vulkan!"};
     };
 
 }

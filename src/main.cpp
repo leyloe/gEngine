@@ -5,7 +5,7 @@
 
 int main()
 {
-    ge::app app;
+    ge::App app;
 
     try
     {
