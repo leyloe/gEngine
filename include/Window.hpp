@@ -10,7 +10,7 @@ namespace ge
     class Window
     {
     private:
-        void initWindow();
+        void initWindow(int w, int h, std::string name);
 
         const int width;
         const int height;
@@ -22,5 +22,4 @@ namespace ge
         Window(int w, int h, std::string name);
         ~Window();
     };
-
 }
