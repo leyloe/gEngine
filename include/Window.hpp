@@ -23,7 +23,6 @@ namespace ge
         ~Window();
         bool shouldClose();
 
-        // Delete copy constructor and operator
         Window(const Window &) = delete;
         Window &operator=(const Window &) = delete;
     };
