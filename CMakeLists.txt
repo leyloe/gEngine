@@ -15,9 +15,9 @@ find_package(Vulkan REQUIRED)
 find_package(glm REQUIRED)
 
 target_link_libraries(${PROJECT_NAME}
-    glfw
     Vulkan::Vulkan
     glm::glm
+    glfw
 )
 
 target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src)
