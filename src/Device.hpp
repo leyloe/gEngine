@@ -8,7 +8,8 @@ namespace ge
     class Device
     {
     private:
-        VkInstance createInstance();
+        VkInstance instance;
+        void createInstance();
 
     public:
         Device();
