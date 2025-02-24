@@ -14,7 +14,7 @@ find_package(glfw3 REQUIRED)
 find_package(Vulkan REQUIRED)
 find_package(glm REQUIRED)
 
-target_link_libraries(gEngine 
+target_link_libraries(${PROJECT_NAME}
     glfw
     vulkan
     glm::glm
