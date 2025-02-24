@@ -8,5 +8,5 @@ mkdir build && cd build
 cmake .. # -G Ninja
 cmake --build .
 ```
-Oh yeah, and you need the following devel libraries installed: **Vulkan, GLFW, GLM** \
+Oh yeah, and you need the following development libraries installed: **Vulkan, GLFW, GLM** \
 I have no clue what platform you're on so figure it out.
