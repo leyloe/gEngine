@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.30)
 
 project(gEngine)
 
@@ -6,6 +6,7 @@ set(SOURCES
     src/Main.cpp
     src/App.cpp
     src/Window.cpp
+    src/Device.cpp
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES})
