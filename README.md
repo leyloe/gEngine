@@ -3,7 +3,8 @@ I'd rather use Vulkan than OpenGL. \
 G as in the real G.
 
 ## Build
-```
+Use your POSIX shell or something.
+```bash
 mkdir build && cd build
 cmake .. # -G Ninja
 cmake --build .
