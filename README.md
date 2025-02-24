@@ -1,5 +1,4 @@
 ## G Engine
-I'd rather use Vulkan than OpenGL. \
 Gangster engine (i think)
 
 ## Build
