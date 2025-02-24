@@ -14,5 +14,3 @@ find_package(glfw3 REQUIRED)
 target_link_libraries(gEngine glfw)
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src)
-
-
