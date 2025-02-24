@@ -1,6 +1,6 @@
 ## G Engine
 I'd rather use Vulkan than OpenGL. \
-G as in the real G.
+Gangster engine (i think)
 
 ## Build
 Use your POSIX shell or something.
