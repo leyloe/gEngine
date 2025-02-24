@@ -16,7 +16,7 @@ find_package(glm REQUIRED)
 
 target_link_libraries(${PROJECT_NAME}
     glfw
-    vulkan
+    Vulkan::Vulkan
     glm::glm
 )
 
