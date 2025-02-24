@@ -5,5 +5,6 @@ G as in the real G.
 ## Build
 ```
 mkdir build && cd build
-cmake --build ..
+cmake ..
+cmake --build .
 ```
