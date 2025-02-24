@@ -11,6 +11,13 @@ set(SOURCES
 add_executable(${PROJECT_NAME} ${SOURCES})
 
 find_package(glfw3 REQUIRED)
-target_link_libraries(gEngine glfw)
+find_package(Vulkan REQUIRED)
+find_package(glm REQUIRED)
+
+target_link_libraries(gEngine 
+    glfw
+    vulkan
+    glm::glm
+)
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src)
