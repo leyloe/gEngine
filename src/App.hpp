@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Window.hpp"
+#include "Device.hpp"
 
 namespace ge
 {
@@ -14,6 +15,7 @@ namespace ge
 
     private:
         Window window{WIDTH, HEIGHT, "Hello Vulkan!"};
+        // Device device;
     };
 
 }
