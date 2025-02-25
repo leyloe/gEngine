@@ -13,6 +13,12 @@ namespace ge
     public:
         Device();
         ~Device();
+
+#ifdef NDEBUG
+        const bool enableValidationLayers = false;
+#else
+        const bool enableValidationLayers = true;
+#endif
     };
 
 }
