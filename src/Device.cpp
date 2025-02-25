@@ -1,6 +1,7 @@
 #include "Device.hpp"
 
 #include <stdexcept>
+#include <vector>
 
 namespace ge
 {
@@ -38,6 +39,20 @@ namespace ge
         createInfo.ppEnabledExtensionNames = glfwExtensions;
 
         createInfo.enabledLayerCount = 0;
+
+        std::vector<const char *> requiredExtensions;
+
+        for (uint32_t i = 0; i < glfwExtensionCount; i++)
+        {
+            requiredExtensions.emplace_back(glfwExtensions[i]);
+        }
+
+        requiredExtensions.emplace_back(VK_KHR_PORTABILITY_ENUMERATION_EXTENSION_NAME);
+
+        createInfo.flags |= VK_INSTANCE_CREATE_ENUMERATE_PORTABILITY_BIT_KHR;
+
+        createInfo.enabledExtensionCount = (uint32_t)requiredExtensions.size();
+        createInfo.ppEnabledExtensionNames = requiredExtensions.data();
 
         if (vkCreateInstance(&createInfo, nullptr, &instance) != VK_SUCCESS)
         {
