@@ -1,6 +1,7 @@
 #include "Device.hpp"
 
 #include <stdexcept>
+#include <string.h>
 
 namespace ge
 {
@@ -17,6 +18,11 @@ namespace ge
 
     void Device::createInstance()
     {
+        if (enableValidationLayers && !checkValidationLayerSupport())
+        {
+            throw std::runtime_error("validation layers requested, but not available!");
+        }
+
         VkApplicationInfo appInfo{};
         appInfo.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
         appInfo.pApplicationName = "Hello Triangle";
@@ -52,6 +58,25 @@ namespace ge
 
         std::vector<VkLayerProperties> availableLayers(layerCount);
         vkEnumerateInstanceLayerProperties(&layerCount, availableLayers.data());
+
+        for (const char *layerName : validationLayers)
+        {
+            bool layerFound = false;
+
+            for (const auto &layerProperties : availableLayers)
+            {
+                if (strcmp(layerName, layerProperties.layerName) == 0)
+                {
+                    layerFound = true;
+                    break;
+                }
+            }
+
+            if (!layerFound)
+            {
+                return false;
+            }
+        }
 
         return false;
     }
