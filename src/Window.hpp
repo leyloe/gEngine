@@ -23,7 +23,7 @@ namespace ge
         ~Window();
         bool shouldClose();
 
-        Window(const Window &) = delete;
-        Window& operator=(const Window&) = delete;
+        Window(const Window&) = delete;
+        Window& operator = (const Window&) = delete;
     };
 }
