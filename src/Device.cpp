@@ -1,5 +1,7 @@
 #include "Device.hpp"
 
+#include <stdexcept>
+
 namespace ge
 {
 
