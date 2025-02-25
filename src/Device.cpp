@@ -1,7 +1,6 @@
 #include "Device.hpp"
 
 #include <stdexcept>
-#include <vector>
 
 namespace ge
 {
