@@ -43,4 +43,16 @@ namespace ge
             throw std::runtime_error("failed to create instance!");
         }
     }
+
+    bool Device::checkValidationLayerSupport()
+    {
+        u_int32_t layerCount;
+
+        vkEnumerateInstanceLayerProperties(&layerCount, nullptr);
+
+        std::vector<VkLayerProperties> availableLayers(layerCount);
+        vkEnumerateInstanceLayerProperties(&layerCount, availableLayers.data());
+
+        return false;
+    }
 }

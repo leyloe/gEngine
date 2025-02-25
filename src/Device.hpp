@@ -11,6 +11,7 @@ namespace ge
     private:
         VkInstance instance;
         void createInstance();
+        bool checkValidationLayerSupport();
 
         const std::vector<const char *> validationLayers = {"VK_LAYER_KHRONOS_validation"};
 
