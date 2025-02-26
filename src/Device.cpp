@@ -52,8 +52,7 @@ namespace ge
 
     bool Device::checkValidationLayerSupport()
     {
-        u_int32_t layerCount;
-
+        uint32_t layerCount;
         vkEnumerateInstanceLayerProperties(&layerCount, nullptr);
 
         std::vector<VkLayerProperties> availableLayers(layerCount);
@@ -78,6 +77,6 @@ namespace ge
             }
         }
 
-        return false;
+        return true;
     }
 }
