@@ -10,6 +10,7 @@ namespace ge
     {
     private:
         VkInstance instance;
+        VkDebugUtilsMessengerEXT debugMessenger;
         void createInstance();
         bool checkValidationLayerSupport();
         std::vector<const char *> getRequiredExtensions();
