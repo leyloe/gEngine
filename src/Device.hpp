@@ -14,6 +14,7 @@ namespace ge
         void createInstance();
         bool checkValidationLayerSupport();
         std::vector<const char *> getRequiredExtensions();
+        void setupDebugMessenger();
 
         const std::vector<const char *> validationLayers = {"VK_LAYER_KHRONOS_validation"};
 
