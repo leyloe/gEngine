@@ -35,14 +35,19 @@ namespace ge
         createInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
         createInfo.pApplicationInfo = &appInfo;
 
-        uint32_t glfwExtensionCount = 0;
-        const char **glfwExtensions;
-        glfwExtensions = glfwGetRequiredInstanceExtensions(&glfwExtensionCount);
+        auto extensions = getRequiredExtensions();
+        createInfo.enabledExtensionCount = static_cast<uint32_t>(extensions.size());
+        createInfo.ppEnabledExtensionNames = extensions.data();
 
-        createInfo.enabledExtensionCount = glfwExtensionCount;
-        createInfo.ppEnabledExtensionNames = glfwExtensions;
-
-        createInfo.enabledLayerCount = 0;
+        if (enableValidationLayers)
+        {
+            createInfo.enabledLayerCount = static_cast<uint32_t>(validationLayers.size());
+            createInfo.ppEnabledLayerNames = validationLayers.data();
+        }
+        else
+        {
+            createInfo.enabledLayerCount = 0;
+        }
 
         if (vkCreateInstance(&createInfo, nullptr, &instance) != VK_SUCCESS)
         {
