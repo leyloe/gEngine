@@ -6,7 +6,6 @@ set(SOURCES
     src/Main.cpp
     src/App.cpp
     src/Window.cpp
-
     src/Device/Device.cpp
     src/Device/DebugUtils.cpp
     src/Device/DeviceUtils.cpp
