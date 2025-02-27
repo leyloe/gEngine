@@ -1,10 +1,10 @@
 #include "DebugUtils.hpp"
 #include "DeviceUtils.hpp"
+#include "Device.hpp"
 
 #include <stdexcept>
 #include <iostream>
 #include <string.h>
-#include "Device.hpp"
 
 namespace ge
 {
