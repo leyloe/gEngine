@@ -135,6 +135,10 @@ namespace ge
         }
     }
 
+    void Device::createSurface()
+    {
+    }
+
     void Device::pickPhysicalDevice()
     {
         uint32_t deviceCount = 0;
