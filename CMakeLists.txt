@@ -8,6 +8,7 @@ set(SOURCES
     src/Window.cpp
     src/Device.cpp
     src/DebugUtils.cpp
+    src/DeviceUtils.cpp
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES})
