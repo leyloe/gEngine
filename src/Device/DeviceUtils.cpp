@@ -5,7 +5,7 @@ namespace ge
 {
     bool QueueFamilyIndices::isComplete()
     {
-        return graphicsFamily.has_value();
+        return graphicsFamily.has_value() && presentFamily.has_value();
     }
 
     QueueFamilyIndices findQueueFamilies(VkPhysicalDevice device)
