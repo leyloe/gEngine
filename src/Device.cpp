@@ -1,5 +1,6 @@
 #include "Device.hpp"
 #include "DebugUtils.hpp"
+#include "DeviceUtils.hpp"
 
 #include <stdexcept>
 #include <iostream>
@@ -128,17 +129,6 @@ namespace ge
         {
             throw std::runtime_error("failed to set up debug messenger!");
         }
-    }
-
-    bool isDeviceSuitable(VkPhysicalDevice device)
-    {
-        VkPhysicalDeviceProperties deviceProperties;
-        VkPhysicalDeviceFeatures deviceFeatures;
-        vkGetPhysicalDeviceProperties(device, &deviceProperties);
-        vkGetPhysicalDeviceFeatures(device, &deviceFeatures);
-
-        return deviceProperties.deviceType == VK_PHYSICAL_DEVICE_TYPE_DISCRETE_GPU &&
-               deviceFeatures.geometryShader;
     }
 
     void Device::pickPhysicalDevice()
