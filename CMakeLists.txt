@@ -6,9 +6,10 @@ set(SOURCES
     src/Main.cpp
     src/App.cpp
     src/Window.cpp
-    src/Device.cpp
-    src/DebugUtils.cpp
-    src/DeviceUtils.cpp
+
+    src/Device/Device.cpp
+    src/Device/DebugUtils.cpp
+    src/Device/DeviceUtils.cpp
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES})
