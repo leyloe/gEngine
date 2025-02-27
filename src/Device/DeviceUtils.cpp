@@ -1,18 +1,12 @@
 #include "Device.hpp"
-
-#include <optional>
+#include "DeviceUtils.hpp"
 
 namespace ge
 {
-    struct QueueFamilyIndices
+    bool QueueFamilyIndices::isComplete()
     {
-        std::optional<uint32_t> graphicsFamily;
-
-        bool isComplete()
-        {
-            return graphicsFamily.has_value();
-        }
-    };
+        return graphicsFamily.has_value();
+    }
 
     QueueFamilyIndices findQueueFamilies(VkPhysicalDevice device)
     {

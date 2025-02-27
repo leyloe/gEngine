@@ -4,6 +4,7 @@
 #include <stdexcept>
 #include <iostream>
 #include <string.h>
+#include "Device.hpp"
 
 namespace ge
 {
@@ -156,5 +157,15 @@ namespace ge
         {
             throw std::runtime_error("failed to find a suitable GPU!");
         }
+    }
+
+    void Device::createLogicalDevice()
+    {
+        QueueFamilyIndices indices = findQueueFamilies(physicalDevice);
+
+        VkDeviceQueueCreateInfo queueCreateInfo{};
+        queueCreateInfo.sType = VK_STRUCTURE_TYPE_DEVICE_QUEUE_CREATE_INFO;
+        queueCreateInfo.queueFamilyIndex = indices.graphicsFamily.value();
+        queueCreateInfo.queueCount = 1;
     }
 }
