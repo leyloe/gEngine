@@ -11,10 +11,16 @@ namespace ge
     private:
         VkInstance instance;
         VkDebugUtilsMessengerEXT debugMessenger;
+
+        VkPhysicalDevice physicalDevice = VK_NULL_HANDLE;
+
         void createInstance();
-        bool checkValidationLayerSupport();
-        std::vector<const char *> getRequiredExtensions();
         void setupDebugMessenger();
+        void pickPhysicalDevice();
+
+        bool checkValidationLayerSupport();
+
+        std::vector<const char *> getRequiredExtensions();
 
         const std::vector<const char *> validationLayers = {"VK_LAYER_KHRONOS_validation"};
 
