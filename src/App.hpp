@@ -15,7 +15,7 @@ namespace ge
 
     private:
         Window window{WIDTH, HEIGHT, "Hello Vulkan!"};
-        Device device;
+        Device device{window};
     };
 
 }

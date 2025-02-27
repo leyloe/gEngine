@@ -14,6 +14,7 @@ namespace ge
         VkDevice device;
         VkQueue graphicsQueue;
         VkSurfaceKHR surface;
+        Window &window;
 
         const std::vector<const char *> validationLayers = {"VK_LAYER_KHRONOS_validation"};
         VkPhysicalDevice physicalDevice = VK_NULL_HANDLE;
@@ -34,7 +35,7 @@ namespace ge
         const bool enableValidationLayers = true;
 #endif
 
-        Device();
+        Device(Window &window);
         ~Device();
     };
 }

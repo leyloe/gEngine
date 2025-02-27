@@ -9,7 +9,7 @@
 namespace ge
 {
 
-    Device::Device()
+    Device::Device(Window &window) : window{window}
     {
         createInstance();
         setupDebugMessenger();
@@ -137,6 +137,7 @@ namespace ge
 
     void Device::createSurface()
     {
+        window.createWindowSurface(instance, &surface);
     }
 
     void Device::pickPhysicalDevice()
