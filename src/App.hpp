@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Window.hpp"
-#include "Device.hpp"
+#include "Device/Device.hpp"
 
 namespace ge
 {
