@@ -13,6 +13,7 @@ namespace ge
         VkDebugUtilsMessengerEXT debugMessenger;
         VkDevice device;
         VkQueue graphicsQueue;
+        VkSurfaceKHR surface;
 
         const std::vector<const char *> validationLayers = {"VK_LAYER_KHRONOS_validation"};
         VkPhysicalDevice physicalDevice = VK_NULL_HANDLE;
@@ -22,6 +23,7 @@ namespace ge
 
         void createInstance();
         void setupDebugMessenger();
+        void createSurface();
         void pickPhysicalDevice();
         void createLogicalDevice();
 
