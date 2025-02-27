@@ -1,4 +1,5 @@
 #include "Device.hpp"
+#include "DebugUtils.hpp"
 
 #include <stdexcept>
 #include <iostream>
