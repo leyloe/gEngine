@@ -22,6 +22,7 @@ namespace ge
         Window(int w, int h, std::string name);
         ~Window();
         bool shouldClose();
+        void createWindowSurface(VkInstance instance, VkSurfaceKHR *surface);
 
         Window(const Window &) = delete;
         Window &operator=(const Window &) = delete;
