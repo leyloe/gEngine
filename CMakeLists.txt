@@ -8,7 +8,7 @@ set(SOURCES
     src/Window.cpp
     src/Device/Device.cpp
     src/Device/Debug.cpp
-    src/Device/DeviceUtils.cpp
+    src/Device/Structs.cpp
     src/Device/DeviceExt.cpp
 )
 
