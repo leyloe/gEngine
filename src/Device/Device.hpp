@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Window.hpp"
-#include "Structs.hpp"
+#include "DeviceStructs.hpp"
 
 #include <vector>
 

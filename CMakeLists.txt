@@ -8,8 +8,8 @@ set(SOURCES
     src/Window.cpp
     src/Device/Device.cpp
     src/Device/Debug.cpp
-    src/Device/Structs.cpp
-    src/Device/DeviceEx.cpp
+    src/Device/DeviceStructs.cpp
+    src/Device/DeviceHelper.cpp
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES})
