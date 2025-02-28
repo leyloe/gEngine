@@ -8,6 +8,7 @@
 namespace ge
 {
     struct QueueFamilyIndices;
+    struct SwapChainSupportDetails;
 
     class Device
     {
@@ -48,6 +49,8 @@ namespace ge
 
         Device(Window &window);
         ~Device();
+
+        SwapChainSupportDetails querySwapChainSupport(VkPhysicalDevice device);
 
         Device(const Device &) = delete;
         void operator=(const Device &) = delete;

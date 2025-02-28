@@ -3,6 +3,7 @@
 #include "Device.hpp"
 
 #include <optional>
+#include <vector>
 
 namespace ge
 {
@@ -12,5 +13,12 @@ namespace ge
         std::optional<uint32_t> presentFamily;
 
         bool isComplete();
+    };
+
+    struct SwapChainSupportDetails
+    {
+        VkSurfaceCapabilitiesKHR capabilities;
+        std::vector<VkSurfaceFormatKHR> formats;
+        std::vector<VkPresentModeKHR> presentModes;
     };
 }
