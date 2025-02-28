@@ -1,4 +1,4 @@
-#include "Device.hpp"
+#include "Device/Device.hpp"
 #include <string.h>
 #include <set>
 

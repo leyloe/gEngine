@@ -1,4 +1,4 @@
-#include "DeviceStructs.hpp"
+#include "Device/DeviceStructs.hpp"
 
 namespace ge
 {

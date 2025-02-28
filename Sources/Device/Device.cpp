@@ -1,5 +1,5 @@
-#include "Debug.hpp"
-#include "Device.hpp"
+#include "Device/Debug.hpp"
+#include "Device/Device.hpp"
 
 #include <stdexcept>
 #include <iostream>

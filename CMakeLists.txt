@@ -3,13 +3,13 @@ cmake_minimum_required(VERSION 3.30)
 project(gEngine)
 
 set(SOURCES
-    src/Main.cpp
-    src/App.cpp
-    src/Window.cpp
-    src/Device/Device.cpp
-    src/Device/Debug.cpp
-    src/Device/DeviceStructs.cpp
-    src/Device/DeviceHelper.cpp
+    Sources/Main.cpp
+    Sources/App.cpp
+    Sources/Window.cpp
+    Sources/Device/Device.cpp
+    Sources/Device/Debug.cpp
+    Sources/Device/DeviceStructs.cpp
+    Sources/Device/DeviceHelper.cpp
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES})
@@ -24,4 +24,4 @@ target_link_libraries(${PROJECT_NAME}
     glm::glm
 )
 
-target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src)
+target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/Headers)
