@@ -48,5 +48,11 @@ namespace ge
 
         Device(Window &window);
         ~Device();
+
+        Device(const Device &) = delete;
+        void operator=(const Device &) = delete;
+
+        Device(Device &&) = delete;
+        Device &operator=(Device &&) = delete;
     };
 }
