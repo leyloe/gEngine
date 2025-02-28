@@ -1,5 +1,6 @@
 #include "Device.hpp"
 #include "DeviceUtils.hpp"
+#include <set>
 
 namespace ge
 {
@@ -45,10 +46,30 @@ namespace ge
         return indices;
     }
 
-    bool isDeviceSuitable(VkPhysicalDevice device, VkSurfaceKHR surface)
+    bool checkDeviceExtensionSupport(VkPhysicalDevice device, const std::vector<const char *> deviceExtensions)
+    {
+        uint32_t extensionCount;
+        vkEnumerateDeviceExtensionProperties(device, nullptr, &extensionCount, nullptr);
+
+        std::vector<VkExtensionProperties> availableExtensions(extensionCount);
+        vkEnumerateDeviceExtensionProperties(device, nullptr, &extensionCount, availableExtensions.data());
+
+        std::set<std::string> requiredExtensions(deviceExtensions.begin(), deviceExtensions.end());
+
+        for (const auto &extension : availableExtensions)
+        {
+            requiredExtensions.erase(extension.extensionName);
+        }
+
+        return requiredExtensions.empty();
+    }
+
+    bool isDeviceSuitable(VkPhysicalDevice device, VkSurfaceKHR surface, const std::vector<const char *> deviceExtensions)
     {
         QueueFamilyIndices indices = findQueueFamilies(device, surface);
 
-        return indices.isComplete();
+        bool extensionsSupported = checkDeviceExtensionSupport(device, deviceExtensions);
+
+        return indices.isComplete() && extensionsSupported;
     }
 }

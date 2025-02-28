@@ -157,7 +157,7 @@ namespace ge
 
         for (const auto &device : devices)
         {
-            if (isDeviceSuitable(device, surface))
+            if (isDeviceSuitable(device, surface, deviceExtensions))
             {
                 physicalDevice = device;
                 break;

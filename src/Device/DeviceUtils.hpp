@@ -14,7 +14,7 @@ namespace ge
         bool isComplete();
     };
 
-    bool isDeviceSuitable(VkPhysicalDevice device, VkSurfaceKHR surface);
+    bool isDeviceSuitable(VkPhysicalDevice device, VkSurfaceKHR surface, const std::vector<const char *> deviceExtensions);
     QueueFamilyIndices findQueueFamilies(VkPhysicalDevice device, VkSurfaceKHR surface);
 
 }

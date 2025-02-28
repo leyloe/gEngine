@@ -18,6 +18,8 @@ namespace ge
         VkQueue presentQueue;
 
         const std::vector<const char *> validationLayers = {"VK_LAYER_KHRONOS_validation"};
+        const std::vector<const char *> deviceExtensions = {VK_KHR_SWAPCHAIN_EXTENSION_NAME};
+
         VkPhysicalDevice physicalDevice = VK_NULL_HANDLE;
 
         bool checkValidationLayerSupport();
