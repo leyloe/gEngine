@@ -111,7 +111,7 @@ namespace ge
 
         for (const auto &device : devices)
         {
-            if (isDeviceSuitable(device, surface, deviceExtensions))
+            if (isDeviceSuitable(device))
             {
                 physicalDevice = device;
                 break;
@@ -126,7 +126,7 @@ namespace ge
 
     void Device::createLogicalDevice()
     {
-        QueueFamilyIndices indices = findQueueFamilies(physicalDevice, surface);
+        QueueFamilyIndices indices = findQueueFamilies(physicalDevice);
 
         std::vector<VkDeviceQueueCreateInfo> queueCreateInfos;
         std::set<uint32_t> uniqueQueueFamilies = {
@@ -164,4 +164,5 @@ namespace ge
         vkGetDeviceQueue(device, indices.graphicsFamily.value(), 0, &graphicsQueue);
         vkGetDeviceQueue(device, indices.presentFamily.value(), 0, &presentQueue);
     }
+
 }

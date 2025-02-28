@@ -1,11 +1,14 @@
 #pragma once
 
 #include "Window.hpp"
+#include "DeviceUtils.hpp"
 
 #include <vector>
 
 namespace ge
 {
+    struct QueueFamilyIndices;
+
     class Device
     {
     private:
@@ -30,6 +33,11 @@ namespace ge
         void createSurface();
         void pickPhysicalDevice();
         void createLogicalDevice();
+
+        bool isDeviceSuitable(VkPhysicalDevice device);
+        QueueFamilyIndices findQueueFamilies(VkPhysicalDevice device);
+
+        bool checkDeviceExtensionSupport(VkPhysicalDevice device);
 
     public:
 #ifdef NDEBUG
