@@ -1,4 +1,4 @@
-#include "DebugUtils.hpp"
+#include "Debug.hpp"
 #include "DeviceUtils.hpp"
 #include "Device.hpp"
 
