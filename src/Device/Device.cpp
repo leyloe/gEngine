@@ -156,7 +156,7 @@ namespace ge
 
         for (const auto &device : devices)
         {
-            if (isDeviceSuitable(device))
+            if (isDeviceSuitable(device, surface))
             {
                 physicalDevice = device;
                 break;
@@ -171,7 +171,7 @@ namespace ge
 
     void Device::createLogicalDevice()
     {
-        QueueFamilyIndices indices = findQueueFamilies(physicalDevice);
+        QueueFamilyIndices indices = findQueueFamilies(physicalDevice, surface);
 
         VkDeviceQueueCreateInfo queueCreateInfo{};
         queueCreateInfo.sType = VK_STRUCTURE_TYPE_DEVICE_QUEUE_CREATE_INFO;
