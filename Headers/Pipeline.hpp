@@ -8,7 +8,9 @@ namespace ge
 {
     struct PipelineConfigInfo
     {
+        VkPipelineInputAssemblyStateCreateInfo inputAssemblyInfo;
     };
+
     class Pipeline
     {
     public:
