@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Window.hpp"
+#include "Pipeline.hpp"
 #include "Device/Device.hpp"
 
 namespace ge
@@ -15,6 +16,7 @@ namespace ge
 
     private:
         Window window{WIDTH, HEIGHT, "Hello Vulkan!"};
+        Pipeline pipeline{"Shaders_build/Shader.vert.spv", "Shaders_build/Shader.frag.spv"};
         Device device{window};
     };
 

@@ -4,10 +4,16 @@ namespace ge
 {
     Pipeline::Pipeline(const std::string &vertFilepath, const std::string &fragFilepath)
     {
+        createGraphicsPipeline(vertFilepath, fragFilepath);
     }
 
     void Pipeline::createGraphicsPipeline(const std::string &vertFilepath, const std::string &fragFilepath)
     {
+        auto vertCode = readFile(vertFilepath);
+        auto fragCode = readFile(fragFilepath);
+
+        std::cout << "Vertex Shader Code Size: " << vertCode.size() << std::endl;
+        std::cout << "Fragment Shader Code Size: " << fragCode.size() << std::endl;
     }
 
     std::vector<char> Pipeline::readFile(const std::string &filepath)
