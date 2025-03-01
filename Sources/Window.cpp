@@ -29,6 +29,11 @@ namespace ge
         }
     }
 
+    void Window::GetFramebufferSize(int *width, int *height)
+    {
+        return glfwGetFramebufferSize(window, width, height);
+    }
+
     void Window::initWindow(int w, int h, std::string name)
     {
         glfwInit();

@@ -39,6 +39,8 @@ namespace ge
 
         bool checkDeviceExtensionSupport(VkPhysicalDevice device);
 
+        VkExtent2D chooseSwapExtent(const VkSurfaceCapabilitiesKHR &capabilities);
+
     public:
 #ifdef NDEBUG
         const bool enableValidationLayers = false;

@@ -8,6 +8,8 @@
 #include <vector>
 #include <string.h>
 #include <set>
+#include <limits>
+#include <bits/algorithmfwd.h>
 
 namespace ge
 {
@@ -27,6 +29,7 @@ namespace ge
         ~Window();
         bool shouldClose();
         void createWindowSurface(VkInstance instance, VkSurfaceKHR *surface);
+        void GetFramebufferSize(int *width, int *height);
 
         Window(const Window &) = delete;
         Window &operator=(const Window &) = delete;
