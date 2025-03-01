@@ -9,7 +9,7 @@
 #include <string.h>
 #include <set>
 #include <limits>
-#include <bits/algorithmfwd.h>
+#include <algorithm>
 
 namespace ge
 {
