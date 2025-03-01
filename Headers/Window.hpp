@@ -10,6 +10,7 @@
 #include <set>
 #include <limits>
 #include <algorithm>
+#include <stdexcept>
 
 namespace ge
 {

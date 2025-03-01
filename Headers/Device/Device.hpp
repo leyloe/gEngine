@@ -3,6 +3,7 @@
 #include "Window.hpp"
 #include "DeviceStructs.hpp"
 #include "Debug.hpp"
+#include "Device/Helper.hpp"
 
 namespace ge
 {
@@ -19,6 +20,10 @@ namespace ge
         VkSurfaceKHR surface;
         Window &window;
         VkQueue presentQueue;
+        VkSwapchainKHR swapChain;
+        std::vector<VkImage> swapChainImages;
+        VkFormat swapChainImageFormat;
+        VkExtent2D swapChainExtent;
 
         const std::vector<const char *> validationLayers = {"VK_LAYER_KHRONOS_validation"};
         const std::vector<const char *> deviceExtensions = {VK_KHR_SWAPCHAIN_EXTENSION_NAME};
