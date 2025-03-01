@@ -64,7 +64,6 @@ namespace ge
         pipelineInfo.basePipelineHandle = VK_NULL_HANDLE;
 
         if (vkCreateGraphicsPipelines(
-
                 device._device(),
                 VK_NULL_HANDLE,
                 1,
