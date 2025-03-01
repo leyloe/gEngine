@@ -3,6 +3,7 @@
 #include "Device/Device.hpp"
 
 #include <fstream>
+#include <cassert>
 
 namespace ge
 {

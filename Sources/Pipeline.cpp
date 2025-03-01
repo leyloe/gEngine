@@ -23,6 +23,13 @@ namespace ge
         const std::string &fragFilepath,
         const PipelineConfigInfo &configInfo)
     {
+        assert(
+            configInfo.pipelineLayout != VK_NULL_HANDLE &&
+            "Cannot create graphics pipeline: no pipelineLayout provided in configInfo");
+        assert(
+            configInfo.renderPass != VK_NULL_HANDLE &&
+            "Cannot create graphics pipeline: no renderPass provided in configInfo");
+
         auto vertCode = readFile(vertFilepath);
         auto fragCode = readFile(fragFilepath);
 
@@ -64,9 +71,11 @@ namespace ge
         pipelineInfo.pColorBlendState = &configInfo.colorBlendInfo;
         pipelineInfo.pDepthStencilState = &configInfo.depthStencilInfo;
         pipelineInfo.pDynamicState = nullptr;
+
         pipelineInfo.layout = configInfo.pipelineLayout;
         pipelineInfo.renderPass = configInfo.renderPass;
         pipelineInfo.subpass = configInfo.subpass;
+
         pipelineInfo.basePipelineIndex = -1;
         pipelineInfo.basePipelineHandle = VK_NULL_HANDLE;
 
