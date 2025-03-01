@@ -31,7 +31,7 @@ namespace ge
             const std::string &fragFilepath,
             const PipelineConfigInfo &configInfo);
 
-        ~Pipeline() {}
+        ~Pipeline();
 
         Pipeline(const Pipeline &) = delete;
         void operator=(const Pipeline &) = delete;

@@ -11,6 +11,13 @@ namespace ge
         createGraphicsPipeline(vertFilepath, fragFilepath, configInfo);
     }
 
+    Pipeline::~Pipeline()
+    {
+        vkDestroyShaderModule(device._device(), vertShaderModule, nullptr);
+        vkDestroyShaderModule(device._device(), fragShaderModule, nullptr);
+        vkDestroyPipeline(device._device(), graphicsPipeline, nullptr);
+    }
+
     void Pipeline::createGraphicsPipeline(
         const std::string &vertFilepath,
         const std::string &fragFilepath,
