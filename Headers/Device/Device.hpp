@@ -57,6 +57,8 @@ namespace ge
         Device(Window &window);
         ~Device();
 
+        VkDevice _device() { return device; }
+
         SwapChainSupportDetails querySwapChainSupport(VkPhysicalDevice device);
 
         Device(const Device &) = delete;
