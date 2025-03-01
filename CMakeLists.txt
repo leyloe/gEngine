@@ -6,6 +6,7 @@ set(SOURCES
     Sources/Main.cpp
     Sources/App.cpp
     Sources/Window.cpp
+    Sources/Pipeline.cpp
     Sources/Device/Device.cpp
     Sources/Device/Debug.cpp
     Sources/Device/DeviceStructs.cpp
