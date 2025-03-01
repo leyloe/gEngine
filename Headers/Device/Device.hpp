@@ -33,6 +33,7 @@ namespace ge
         void createSurface();
         void pickPhysicalDevice();
         void createLogicalDevice();
+        void createSwapChain();
 
         bool isDeviceSuitable(VkPhysicalDevice device);
         QueueFamilyIndices findQueueFamilies(VkPhysicalDevice device);
