@@ -10,6 +10,7 @@ set(SOURCES
     Sources/Device/Debug.cpp
     Sources/Device/DeviceStructs.cpp
     Sources/Device/DeviceHelper.cpp
+    Sources/Device/Helper.cpp
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES})

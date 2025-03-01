@@ -1,6 +1,4 @@
 #include "Device/Device.hpp"
-#include <string.h>
-#include <set>
 
 namespace ge
 {

@@ -1,4 +1,3 @@
-#include "Device/Debug.hpp"
 #include "Device/Device.hpp"
 
 #include <stdexcept>

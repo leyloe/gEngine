@@ -2,9 +2,6 @@
 
 #include "Device.hpp"
 
-#include <optional>
-#include <vector>
-
 namespace ge
 {
     struct QueueFamilyIndices

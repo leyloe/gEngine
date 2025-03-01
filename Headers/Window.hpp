@@ -4,6 +4,10 @@
 #include <GLFW/glfw3.h>
 
 #include <string>
+#include <optional>
+#include <vector>
+#include <string.h>
+#include <set>
 
 namespace ge
 {

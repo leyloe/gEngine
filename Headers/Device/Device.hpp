@@ -2,8 +2,7 @@
 
 #include "Window.hpp"
 #include "DeviceStructs.hpp"
-
-#include <vector>
+#include "Debug.hpp"
 
 namespace ge
 {
